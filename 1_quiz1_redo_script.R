@@ -55,6 +55,6 @@ prog_sat <- psych::alpha(as.data.frame(prog_sat_items), check.keys = FALSE)$scor
 
 # COMBINE EVERYTHING INTO ANALYTIC_DATA
 
-analytic_data <- cbind(categorical_variables, pos_affect, dep, prog_sat)
+analytic_data <- cbind(categorical_variables, prog_sat, dep, pos_affect)
 
 write_csv(analytic_data, path = "quiz1_redo_analytic_data.csv")
